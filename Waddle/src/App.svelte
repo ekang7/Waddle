@@ -4,16 +4,21 @@
   import Counter from './lib/Counter.svelte'
   import Calendar from '@event-calendar/core';
   import TimeGrid from '@event-calendar/time-grid';
+  import Interaction from '@event-calendar/interaction'; 
   import addEvent from '@event-calendar/core';
 
   // Parameters for Calendar Component
-  let plugins = [TimeGrid];
+
+  let ec;
+  let plugins = [TimeGrid, Interaction];
   let options = {
       view: 'timeGridWeek',
+      selectable: true,
+      editable: true,
       events: [
           // your list of events
-        
-      ]
+      ],
+      dateClick: (info) => console.log('hi')
   };
 
   // Example function to update uptions
@@ -45,7 +50,7 @@
     )}>Change slot duration</button> -->
 
   <!-- Imported Calendar Component -->
-  <Calendar {plugins} {options} />
+  <Calendar bind:this = {ec} {plugins} {options} />
 
   <!-- Counter Component -->
   <div class="card">
