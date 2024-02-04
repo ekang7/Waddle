@@ -6,20 +6,48 @@
   import TimeGrid from '@event-calendar/time-grid';
   import addEvent from '@event-calendar/core';
 
-  let ec;
+  // Parameters for Calendar Component
   let plugins = [TimeGrid];
   let options = {
       view: 'timeGridWeek',
       events: [
           // your list of events
+        
       ]
   };
 
+  // Example function to update uptions
+  function updateOptions() {
+        options.slotDuration = '01:00';
+    }
+
+  // trying to test console.log
+  console.log("hello")
+  
 </script>
 
 <main>
+
+<!-- Toggle Day or Week View -->
+  {#if options.view == 'timeGridWeek'}
+    <button on:click= {() => {options.view = 'timeGridDay'}} >Day View</button>
+  {:else}
+    <button on:click= {() => {options.view = 'timeGridWeek'}} >Week View</button>
+  {/if}
+
+  <!-- Attempting to add a new event to calendar -->
+  <!-- <button on:click={addEvent(
+    {
+      id: 10, 
+      start: new Date(2024, 2, 4, 11:00),z
+      end: new Date(2024, 02, 04, 11:30)
+    }
+    )}>Change slot duration</button> -->
+
+  <!-- Imported Calendar Component -->
   <Calendar {plugins} {options} />
 
+  <!-- Counter Component -->
   <div class="card">
     <Counter />
   </div>
@@ -27,7 +55,7 @@
 </main>
 
 <style>
-  .logo {
+  /* .logo {
     height: 6em;
     padding: 1.5em;
     will-change: filter;
@@ -41,7 +69,7 @@
   }
   .read-the-docs {
     color: #888;
-  }
+  } */
 </style>
 
 
