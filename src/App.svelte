@@ -9,21 +9,371 @@
 
   // Parameters for Calendar Component
   // maps people to their list of events
-  // let people_events = {
-  //   "Alex": 
-  //   , 
-  //   "John": 
-  //   ,
-  //   "Jim":
-  //   ,
-  //   "Jill":
-  //   ,
-  //   "Adam": 
-  //   , 
-  //   "Elena":
-  //   , 
-  //   "Olivia":
-  // };
+  let people_events = {
+    "Alex": 
+      [
+          {
+              resourceIds: ["Alex"],
+              allDay: false,
+              start: new Date(2024, 1, 4, 13, 0), 
+              end: new Date(2024, 1, 4, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Alex"],
+              allDay: false,
+              start: new Date(2024, 1, 5, 7, 0), 
+              end: new Date(2024, 1, 5, 11, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Alex"],
+              allDay: false,
+              start: new Date(2024, 1, 5, 13, 0), 
+              end: new Date(2024, 1, 5, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Alex"],
+              allDay: false,
+              start: new Date(2024, 1, 6, 13, 0), 
+              end: new Date(2024, 1, 6, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Alex"],
+              allDay: false,
+              start: new Date(2024, 1, 7, 13, 0), 
+              end: new Date(2024, 1, 7, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Alex"],
+              allDay: false,
+              start: new Date(2024, 1, 8, 10, 0), 
+              end: new Date(2024, 1, 8, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Alex"],
+              allDay: false,
+              start: new Date(2024, 1, 9, 7, 0), 
+              end: new Date(2024, 1, 9, 14, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }    
+      ]
+    , 
+    "John":
+    [
+          {
+              resourceIds: ["John"],
+              allDay: false,
+              start: new Date(2024, 1, 4, 13, 0), 
+              end: new Date(2024, 1, 4, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["John"],
+              allDay: false,
+              start: new Date(2024, 1, 5, 7, 0), 
+              end: new Date(2024, 1, 5, 16, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["John"],
+              allDay: false,
+              start: new Date(2024, 1, 5, 13, 0), 
+              end: new Date(2024, 1, 5, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["John"],
+              allDay: false,
+              start: new Date(2024, 1, 6, 12, 0), 
+              end: new Date(2024, 1, 6, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          },
+          {
+              resourceIds: ["John"],
+              allDay: false,
+              start: new Date(2024, 1, 8, 7, 0), 
+              end: new Date(2024, 1, 8, 14, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["John"],
+              allDay: false,
+              start: new Date(2024, 1, 9, 7, 0), 
+              end: new Date(2024, 1, 9, 10, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["John"],
+              allDay: false,
+              start: new Date(2024, 1, 9, 12, 0), 
+              end: new Date(2024, 1, 9, 17, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }        
+      ] 
+    ,
+    "Jim":
+    [
+          {
+              resourceIds: ["Jim"],
+              allDay: false,
+              start: new Date(2024, 1, 4, 8, 0), 
+              end: new Date(2024, 1, 4, 11, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Jim"],
+              allDay: false,
+              start: new Date(2024, 1, 4, 14, 0), 
+              end: new Date(2024, 1, 4, 16, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Jim"],
+              allDay: false,
+              start: new Date(2024, 1, 5, 7, 0), 
+              end: new Date(2024, 1, 5, 17, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Jim"],
+              allDay: false,
+              start: new Date(2024, 1, 5, 10, 0), 
+              end: new Date(2024, 1, 5, 18, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Jim"],
+              allDay: false,
+              start: new Date(2024, 1, 6, 7, 0), 
+              end: new Date(2024, 1, 6, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          },
+          {
+              resourceIds: ["Jim"],
+              allDay: false,
+              start: new Date(2024, 1, 9, 10, 0), 
+              end: new Date(2024, 1, 9, 15, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }        
+      ] 
+    ,
+    "Jill":
+    [
+          {
+              resourceIds: ["Jill"],
+              allDay: false,
+              start: new Date(2024, 1, 4, 7, 0), 
+              end: new Date(2024, 1, 4, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Jill"],
+              allDay: false,
+              start: new Date(2024, 1, 5, 7, 0), 
+              end: new Date(2024, 1, 5, 10, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Jill"],
+              allDay: false,
+              start: new Date(2024, 1, 5, 13, 0), 
+              end: new Date(2024, 1, 5, 16, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Jill"],
+              allDay: false,
+              start: new Date(2024, 1, 5, 13, 0), 
+              end: new Date(2024, 1, 5, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Jill"],
+              allDay: false,
+              start: new Date(2024, 1, 6, 7, 0), 
+              end: new Date(2024, 1, 6, 10, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Jill"],
+              allDay: false,
+              start: new Date(2024, 1, 6, 13, 0), 
+              end: new Date(2024, 1, 6, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Jill"],
+              allDay: false,
+              start: new Date(2024, 1, 7, 13, 0), 
+              end: new Date(2024, 1, 7, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Jill"],
+              allDay: false,
+              start: new Date(2024, 1, 8, 10, 0), 
+              end: new Date(2024, 1, 8, 19, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }, 
+          {
+              resourceIds: ["Jill"],
+              allDay: false,
+              start: new Date(2024, 1, 9, 7, 0), 
+              end: new Date(2024, 1, 9, 12, 0), 
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'background',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+          }    
+      ]
+  };
   let select_bool = false;
   let ec;
   let plugins = [TimeGrid, Interaction];
