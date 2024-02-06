@@ -73,6 +73,7 @@
               }
           }
       ],
+      selectBackgroundColor: "#a6d4ff",
       dateClick: (info) => console.log('hi'),
       select: selectFunction
   };
