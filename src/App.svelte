@@ -377,26 +377,14 @@
   let select_bool = false;
   let ec;
   let plugins = [TimeGrid, Interaction];
+  // the following line is inspired by ChatGPT
+  let allEvents = Object.values(people_events).reduce((acc, events) => acc.concat(events), []);
   let options = {
       view: 'timeGridWeek',
       selectable: true,
       editable: true,
       slotEventOverlap: true, // allows events to overlap
-      events: [
-          // your list of events
-          {
-              resourceIds: ["Alex"],
-              allDay: false,
-              start: new Date(2024, 1, 4, 13, 0), 
-              end: new Date(2024, 1, 4, 19, 0), 
-              editable: false,
-              startEditable: false,
-              durationEditable: false,
-              display: 'background',
-              backgroundColor: "#a6d4ff", // Blueish color
-              textColor: "#ffffff", // White color
-          }
-      ],
+      events: allEvents,
       selectBackgroundColor: "#a6d4ff",
       dateClick: (info) => console.log('hi'),
       select: selectFunction
