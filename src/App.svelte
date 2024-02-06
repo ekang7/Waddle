@@ -8,7 +8,7 @@
   import addEvent from '@event-calendar/core';
 
   // Parameters for Calendar Component
-
+  let select_bool = false;
   let ec;
   let plugins = [TimeGrid, Interaction];
   let options = {
@@ -81,8 +81,11 @@
   function selectFunction(info) {
     ec.addEvent({start: info.start, end: info.end, 
                 backgroundColor: "#a6d4ff", display: 'background'}); // do I need to add an id?
-    // console.log(info.start);
-    console.log(options.events);
+    ec.unselect();
+    // ec.eventAllUpdated();
+
+    console.log(info.start);
+    // console.log(options.events);
   }
 
   // Example function to update uptions
