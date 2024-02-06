@@ -15,20 +15,57 @@
       view: 'timeGridWeek',
       selectable: true,
       editable: true,
+      slotEventOverlap: true, // allows events to overlap
       events: [
           // your list of events
           {
               id: "Gym",
-              resourceIds: ["resource1", "resource2"],
+              resourceIds: ["John Doe"],
+              allDay: false,
+              start: new Date(2024, 1, 4, 13, 0), 
+              end: new Date(2024, 1, 4, 19, 0), 
+              title: "Gym",
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'auto',
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+              extendedProps: {
+                  description: "I am going to the gym",
+                  location: "Quincy House Gym"
+              }
+          }, 
+          {
+              id: "Gym",
+              resourceIds: ["Jane Doe"],
               allDay: false,
               start: new Date(2024, 1, 4, 9, 0), 
               end: new Date(2024, 1, 4, 17, 0), 
               title: "Gym",
-              editable: true,
+              editable: false,
               startEditable: false,
-              durationEditable: true,
+              durationEditable: false,
               display: 'auto',
-              backgroundColor: "#98e8fa", // Blueish color
+              backgroundColor: "#a6d4ff", // Blueish color
+              textColor: "#ffffff", // White color
+              extendedProps: {
+                  description: "I am going to the gym",
+                  location: "Quincy House Gym"
+              }
+          }, 
+          {
+              id: "Gym",
+              resourceIds: ["Jim Doe"],
+              allDay: false,
+              start: new Date(2024, 1, 4, 9, 0), 
+              end: new Date(2024, 1, 4, 17, 0), 
+              title: "Gym",
+              editable: false,
+              startEditable: false,
+              durationEditable: false,
+              display: 'auto',
+              backgroundColor: "#a6d4ff", // Blueish color
               textColor: "#ffffff", // White color
               extendedProps: {
                   description: "I am going to the gym",
