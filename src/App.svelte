@@ -36,16 +36,20 @@
               }
           }
       ],
-      dateClick: (info) => console.log('hi')
+      dateClick: (info) => console.log('hi'),
+      select: selectFunction
   };
+
+  function selectFunction(info) {
+    ec.addEvent({start: info.start, end: info.end}); // do I need to add an id?
+    // console.log(info.start);
+    console.log(options.events);
+  }
 
   // Example function to update uptions
   function updateOptions() {
         options.slotDuration = '01:00';
     }
-
-  // trying to test console.log
-  console.log("hello")
 
   let name = "";
   let showForm = true;
