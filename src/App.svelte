@@ -17,6 +17,24 @@
       editable: true,
       events: [
           // your list of events
+          {
+              id: "Gym",
+              resourceIds: ["resource1", "resource2"],
+              allDay: false,
+              start: new Date(2024, 1, 4, 9, 0), 
+              end: new Date(2024, 1, 4, 17, 0), 
+              title: "Gym",
+              editable: true,
+              startEditable: false,
+              durationEditable: true,
+              display: 'auto',
+              backgroundColor: "#98e8fa", // Blueish color
+              textColor: "#ffffff", // White color
+              extendedProps: {
+                  description: "I am going to the gym",
+                  location: "Quincy House Gym"
+              }
+          }
       ],
       dateClick: (info) => console.log('hi')
   };
