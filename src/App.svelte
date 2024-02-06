@@ -28,7 +28,7 @@
               editable: false,
               startEditable: false,
               durationEditable: false,
-              display: 'auto',
+              display: 'background',
               backgroundColor: "#a6d4ff", // Blueish color
               textColor: "#ffffff", // White color
               extendedProps: {
@@ -46,7 +46,7 @@
               editable: false,
               startEditable: false,
               durationEditable: false,
-              display: 'auto',
+              display: 'background',
               backgroundColor: "#a6d4ff", // Blueish color
               textColor: "#ffffff", // White color
               extendedProps: {
@@ -64,7 +64,7 @@
               editable: false,
               startEditable: false,
               durationEditable: false,
-              display: 'auto',
+              display: 'background',
               backgroundColor: "#a6d4ff", // Blueish color
               textColor: "#ffffff", // White color
               extendedProps: {
