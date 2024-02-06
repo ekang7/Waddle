@@ -8,6 +8,22 @@
   import addEvent from '@event-calendar/core';
 
   // Parameters for Calendar Component
+  // maps people to their list of events
+  // let people_events = {
+  //   "Alex": 
+  //   , 
+  //   "John": 
+  //   ,
+  //   "Jim":
+  //   ,
+  //   "Jill":
+  //   ,
+  //   "Adam": 
+  //   , 
+  //   "Elena":
+  //   , 
+  //   "Olivia":
+  // };
   let select_bool = false;
   let ec;
   let plugins = [TimeGrid, Interaction];
@@ -19,58 +35,16 @@
       events: [
           // your list of events
           {
-              id: "Gym",
-              resourceIds: ["John Doe"],
+              resourceIds: ["Alex"],
               allDay: false,
               start: new Date(2024, 1, 4, 13, 0), 
               end: new Date(2024, 1, 4, 19, 0), 
-              title: "Gym",
               editable: false,
               startEditable: false,
               durationEditable: false,
               display: 'background',
               backgroundColor: "#a6d4ff", // Blueish color
               textColor: "#ffffff", // White color
-              extendedProps: {
-                  description: "I am going to the gym",
-                  location: "Quincy House Gym"
-              }
-          }, 
-          {
-              id: "Gym",
-              resourceIds: ["Jane Doe"],
-              allDay: false,
-              start: new Date(2024, 1, 4, 9, 0), 
-              end: new Date(2024, 1, 4, 17, 0), 
-              title: "Gym",
-              editable: false,
-              startEditable: false,
-              durationEditable: false,
-              display: 'background',
-              backgroundColor: "#a6d4ff", // Blueish color
-              textColor: "#ffffff", // White color
-              extendedProps: {
-                  description: "I am going to the gym",
-                  location: "Quincy House Gym"
-              }
-          }, 
-          {
-              id: "Gym",
-              resourceIds: ["Jim Doe"],
-              allDay: false,
-              start: new Date(2024, 1, 4, 9, 0), 
-              end: new Date(2024, 1, 4, 17, 0), 
-              title: "Gym",
-              editable: false,
-              startEditable: false,
-              durationEditable: false,
-              display: 'background',
-              backgroundColor: "#a6d4ff", // Blueish color
-              textColor: "#ffffff", // White color
-              extendedProps: {
-                  description: "I am going to the gym",
-                  location: "Quincy House Gym"
-              }
           }
       ],
       selectBackgroundColor: "#a6d4ff",
