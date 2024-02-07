@@ -216,18 +216,6 @@ let people_events = {
           {
               resourceIds: ["Jim"],
               allDay: false,
-              start: new Date(2024, 1, 5, 10, 0), 
-              end: new Date(2024, 1, 5, 18, 0), 
-              editable: false,
-              startEditable: false,
-              durationEditable: false,
-              display: 'background',
-              backgroundColor: "#a6d4ff", // Blueish color
-              textColor: "#ffffff", // White color
-          }, 
-          {
-              resourceIds: ["Jim"],
-              allDay: false,
               start: new Date(2024, 1, 6, 7, 0), 
               end: new Date(2024, 1, 6, 19, 0), 
               editable: false,
