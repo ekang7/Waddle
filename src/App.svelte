@@ -59,7 +59,7 @@ let persons = [
 
   function selectFunction(info) {
     ec.addEvent({start: info.start, end: info.end, 
-                backgroundColor: "#a6d4ff", display: 'background'}); // do I need to add an id?
+                backgroundColor: "#006400", display: 'background'}); // do I need to add an id?, "#a6d4ff" color before
     ec.unselect();
     // ec.eventAllUpdated();
 
@@ -130,14 +130,14 @@ let persons = [
 
   <!-- Imported Calendar Component -->
   <div>
-        <Calendar bind:this = {ec} {plugins} {options} />
         <ListSelect {persons} on:event={handleMessage}></ListSelect>
+        <Calendar bind:this = {ec} {plugins} {options} />
   </div>
 
     <!-- Counter Component -->
-    <div class="card">
+    <!-- <div class="card">
       <Counter />
-    </div>
+    </div> -->
 
   </main>
 
@@ -156,6 +156,10 @@ let persons = [
     }
     .read-the-docs {
       color: #888;
+    } */
+    /* div {
+        display:
+
     } */
   </style>
 

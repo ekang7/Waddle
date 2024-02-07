@@ -15,7 +15,7 @@
     // dispatch('message', {
 	// 		text: '!persons[0].checked'
 	// 	}) ;
-    function sayHello() {
+    function sendPerson() {
 		dispatch('event', {
 			text: persons
 		});
@@ -27,7 +27,7 @@
     {#each persons as {name, checked}}
         <div>
             <label>
-                <input type="checkbox" bind:checked={checked} on:change={sayHello}/>
+                <input type="checkbox" bind:checked={checked} on:change={sendPerson}/>
                 {name}
             </label>
         </div>
@@ -38,10 +38,11 @@
     {/each}
 </div>
 
-<button on:click={sayHello}> Click to say hello </button>
-
-
-
+<style>
+    /* div {
+        display: contents
+    } */
+</style>
 
 
 

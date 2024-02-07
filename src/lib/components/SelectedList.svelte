@@ -4,18 +4,20 @@
 </script>
 
 <style>
-  /* Add your component styles here */
-    .selected {
+  /* Add your component styles here */ 
+    /* .selected {
         font-weight: bold; 
         text-decoration: underline;
-    }
+    } */
 </style>
-
-{#each selected_members as member}
+<!-- <div>
+  {#each selected_members as member}
   <ol class="selected">{member}</ol>
-{/each}
+  {/each}
 
-{#each hover_members as member}
-  <ol>{member}</ol>
-{/each}
+  {#each hover_members as member}
+    <ol>{member}</ol>
+  {/each}
+</div> -->
+
 
