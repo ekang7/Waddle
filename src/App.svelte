@@ -878,7 +878,8 @@
       events: allEvents,
       selectBackgroundColor: "#a6d4ff",
       dateClick: (info) => console.log('hi'),
-      select: selectFunction
+      select: selectFunction, 
+      
   };
 
   function selectFunction(info) {
