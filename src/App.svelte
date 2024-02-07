@@ -75,7 +75,7 @@ let persons = [
 
   function selectFunction(info) {
     ec.addEvent({start: info.start, end: info.end, 
-                backgroundColor: "#a6d4ff", display: 'background'}); // do I need to add an id?, "#a6d4ff" color before
+                backgroundColor: "#3eed44", display: 'background'}); // do I need to add an id?, "#a6d4ff" color before
     ec.unselect();
     // ec.eventAllUpdated();
 
