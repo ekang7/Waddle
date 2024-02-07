@@ -858,6 +858,7 @@
   let allEvents = Object.values(people_events).reduce((acc, events) => acc.concat(events), []);
   let options = {
       view: 'timeGridWeek',
+      allDaySlot: false,
       selectable: true,
       editable: true,
       slotEventOverlap: true, // allows events to overlap
