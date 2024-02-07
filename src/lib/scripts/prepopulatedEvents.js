@@ -264,19 +264,7 @@ let people_events = {
               display: 'background',
               backgroundColor: "#a6d4ff", // Blueish color
               textColor: "#ffffff", // White color
-          }, 
-          {
-              resourceIds: ["Jill"],
-              allDay: false,
-              start: new Date(2024, 1, 5, 13, 0), 
-              end: new Date(2024, 1, 5, 16, 0), 
-              editable: false,
-              startEditable: false,
-              durationEditable: false,
-              display: 'background',
-              backgroundColor: "#a6d4ff", // Blueish color
-              textColor: "#ffffff", // White color
-          }, 
+          },  
           {
               resourceIds: ["Jill"],
               allDay: false,
