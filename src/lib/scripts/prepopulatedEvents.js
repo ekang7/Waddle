@@ -116,7 +116,7 @@ let people_events = {
           {
               resourceIds: ["John"],
               allDay: false,
-              start: new Date(2024, 1, 5, 13, 0), 
+              start: new Date(2024, 1, 5, 18, 0), 
               end: new Date(2024, 1, 5, 19, 0), 
               editable: false,
               startEditable: false,
