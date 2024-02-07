@@ -10,14 +10,13 @@
         text-decoration: underline;
     } */
 </style>
-<!-- <div>
-  {#each selected_members as member}
-  <ol class="selected">{member}</ol>
-  {/each}
 
-  {#each hover_members as member}
-    <ol>{member}</ol>
-  {/each}
-</div> -->
 
+{#each hover_members as member}
+    {#if selected_members.includes(member)}
+        <ol class = "selected">{member}</ol>
+    {:else}
+        <ol>{member}</ol>
+    {/if}
+{/each}
 

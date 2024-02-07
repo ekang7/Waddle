@@ -44,6 +44,22 @@ let persons = [
                     }
                     }, []);
 
+  function eventMouseEnterFunction(info) {
+    // inspired from Claude AI
+    let hoverPoint = ec.dateFromPoint(info.jsEvent.clientX, info.jsEvent.clientY);
+    let eventsInTimeSlot = allEvents.filter(event => {
+        // Convert dates to timestamps for easy comparison
+        let hoverTimestamp = hoverPoint.date.getTime();  
+        let eventStartTimestamp = event.start.getTime();
+        let eventEndTimestamp = event.end.getTime();
+
+        return hoverTimestamp >= eventStartTimestamp && 
+              hoverTimestamp < eventEndTimestamp; 
+        });
+    hover_members = eventsInTimeSlot.map(event => event.resourceIds[0]);
+    console.log("HOVER MEMBERS IS NOW " + hover_members);
+  }
+
   let options = {
       view: 'timeGridWeek',
       allDaySlot: false,
@@ -54,7 +70,7 @@ let persons = [
       selectBackgroundColor: "#a6d4ff",
       dateClick: (info) => console.log('hi'),
       select: selectFunction, 
-      
+      eventMouseEnter: eventMouseEnterFunction
   };
 
   function selectFunction(info) {
