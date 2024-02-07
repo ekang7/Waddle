@@ -1,12 +1,13 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
   import Calendar from '@event-calendar/core';
   import TimeGrid from '@event-calendar/time-grid';
   import Interaction from '@event-calendar/interaction'; 
   import addEvent from '@event-calendar/core';
   import SelectedList from './lib/components/SelectedList.svelte';
+  import PrePopulated from './prePopulated.svelte';
+  import listSelect from './listSelect.svelte';
+  import ListSelect from './listSelect.svelte';
 
   // Parameters for Calendar Component
   // maps people to their list of events
@@ -854,6 +855,8 @@
   };
   let selected_members = ["Olivia", "Alex", "Elena"]; // array of selected members
   let hover_members = ["Adam"]; // array of members that are hovered over
+//   let people_events = PrePopulated; // why doesn't this work
+   
   let select_bool = false;
   let ec;
   let plugins = [TimeGrid, Interaction];
@@ -899,6 +902,8 @@
     showForm = false;
   }
 </script>
+
+
 {#if showForm}
   <form on:submit|preventDefault={handleSubmit}>
     <label for="name">Name:</label>
@@ -924,8 +929,11 @@
       }
       )}>Change slot duration</button> -->
 
-    <!-- Imported Calendar Component -->
-    <Calendar bind:this = {ec} {plugins} {options} />
+  <!-- Imported Calendar Component -->
+  <div>
+        <Calendar bind:this = {ec} {plugins} {options} />
+        <ListSelect></ListSelect>
+  </div>
 
     <!-- Counter Component -->
     <div class="card">
