@@ -24,6 +24,7 @@
 </script>
 
 <div>
+    Responded:
     {#each persons as {name, checked}}
         <div>
             <label>

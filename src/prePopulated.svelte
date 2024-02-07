@@ -106,7 +106,7 @@
                 resourceIds: ["John"],
                 allDay: false,
                 start: new Date(2024, 1, 5, 7, 0), 
-                end: new Date(2024, 1, 5, 16, 0), 
+                end: new Date(2024, 1, 5, 11, 0),
                 editable: false,
                 startEditable: false,
                 durationEditable: false,
@@ -117,7 +117,7 @@
                 {
                 resourceIds: ["John"],
                 allDay: false,
-                start: new Date(2024, 1, 5, 13, 0), 
+                start: new Date(2024, 1, 5, 17, 0), 
                 end: new Date(2024, 1, 5, 19, 0), 
                 editable: false,
                 startEditable: false,
@@ -142,7 +142,7 @@
                 resourceIds: ["John"],
                 allDay: false,
                 start: new Date(2024, 1, 8, 7, 0), 
-                end: new Date(2024, 1, 8, 14, 0), 
+                end: new Date(2024, 1, 8, 11, 0), 
                 editable: false,
                 startEditable: false,
                 durationEditable: false,
@@ -839,7 +839,19 @@
                 backgroundColor: "#a6d4ff", // Blueish color
                 textColor: "#ffffff", // White color
         }
-        ]
+        ],
+        "User": [{
+                resourceIds: ["User"],
+                allDay: false,
+                start: new Date(2024, 1, 5, 7, 0), 
+                end: new Date(2024, 1, 5, 9, 0), 
+                editable: false,
+                startEditable: false,
+                durationEditable: false,
+                display: 'background',
+                backgroundColor: "#a6d4ff", // Blueish color
+                textColor: "#ffffff", // White color
+        }]
         };
 
 </script>

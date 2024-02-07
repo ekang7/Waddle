@@ -27,7 +27,7 @@ let persons = [
 
 
 //   let selected_members = ["Olivia", "Alex", "Elena"]; // array of selected members
-  let hover_members = ["Adam"]; // array of members that are hovered over
+  let hoverMembers = []; // array of members that are hovered over
 //   let people_events = PrePopulated; // why doesn't this work
    
 
@@ -44,21 +44,21 @@ let persons = [
                     }
                     }, []);
 
-  function eventMouseEnterFunction(info) {
-    // inspired from Claude AI
-    let hoverPoint = ec.dateFromPoint(info.jsEvent.clientX, info.jsEvent.clientY);
-    let eventsInTimeSlot = allEvents.filter(event => {
-        // Convert dates to timestamps for easy comparison
-        let hoverTimestamp = hoverPoint.date.getTime();  
-        let eventStartTimestamp = event.start.getTime();
-        let eventEndTimestamp = event.end.getTime();
+//   function eventMouseEnterFunction(info) {
+//     // inspired from Claude AI
+//     let hoverPoint = ec.dateFromPoint(info.jsEvent.clientX, info.jsEvent.clientY);
+//     let eventsInTimeSlot = allEvents.filter(event => {
+//         // Convert dates to timestamps for easy comparison
+//         let hoverTimestamp = hoverPoint.date.getTime();  
+//         let eventStartTimestamp = event.start.getTime();
+//         let eventEndTimestamp = event.end.getTime();
 
-        return hoverTimestamp >= eventStartTimestamp && 
-              hoverTimestamp < eventEndTimestamp; 
-        });
-    hover_members = eventsInTimeSlot.map(event => event.resourceIds[0]);
-    console.log("HOVER MEMBERS IS NOW " + hover_members);
-  }
+//         return hoverTimestamp >= eventStartTimestamp && 
+//               hoverTimestamp < eventEndTimestamp; 
+//         });
+//     hover_members = eventsInTimeSlot.map(event => event.resourceIds[0]);
+//     console.log("HOVER MEMBERS IS NOW " + hover_members);
+//   }
 
   let options = {
       view: 'timeGridWeek',
@@ -70,7 +70,7 @@ let persons = [
       selectBackgroundColor: "#a6d4ff",
       dateClick: (info) => console.log('hi'),
       select: selectFunction, 
-      eventMouseEnter: eventMouseEnterFunction
+      eventMouseEnter: mouseFunction
   };
 
   function selectFunction(info) {
@@ -116,6 +116,33 @@ let persons = [
                 options.events = updatedEvents;
 	} ;
 
+function mouseFunction(info) {
+        let hoverEvent = info.event
+        // console.log(hoverEvent)
+        let startTime = hoverEvent.start
+        let endTime = hoverEvent.end
+        let numAvailableInEvent = 0;
+        hoverMembers = [];
+        for (let i = 0, len_persons = persons.length; i < len_persons; i++) {
+                // console.log(people_events[persons[i].name])
+                for (let j = 0, len_objects_per_person = people_events[persons[i].name].length; j < len_objects_per_person; j++) {
+                        if (startTime >= people_events[persons[i].name][j].start && endTime <= people_events[persons[i].name][j].end) {
+                                // hoverMembers.push(persons[i].name)
+                                hoverMembers = [...hoverMembers, persons[i].name]
+                        }
+                }
+                // if (persons[i].checked == true) {
+                //         selected_members.push(persons[i].name);
+                // }
+        }
+        console.log(hoverMembers)
+        // for (let i = 0, len = persons.length; i < len; i++) {
+        //         if (persons[i].checked == true) {
+        //                 selected_members.push(persons[i].name);
+        //         }
+        // }
+}
+
 </script>
 
 
@@ -126,7 +153,7 @@ let persons = [
     <button type="submit">Submit</button>
   </form>
 {:else}
-  <SelectedList {selected_members} {hover_members}/>
+  <!-- <SelectedList {selected_members} {hover_members}/> -->
   <main>  
   <!-- Toggle Day or Week View -->
   {#if options.view == 'timeGridWeek'}
@@ -147,7 +174,10 @@ let persons = [
   <!-- Imported Calendar Component -->
   <div>
         <ListSelect {persons} on:event={handleMessage}></ListSelect>
+        Add your availability below:
         <Calendar bind:this = {ec} {plugins} {options} />
+        Available at hour:
+        <SelectedList {selected_members} {hoverMembers}/>
   </div>
 
     <!-- Counter Component -->
