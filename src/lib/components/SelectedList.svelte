@@ -20,6 +20,7 @@
       <ol class = "selected">{member}</ol>
   {/if}
 {/each}
+<br/>
   Unprioritized Members
   {#each hoverMembers as member}
   {#if !selected_members.includes(member)}
