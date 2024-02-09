@@ -5,7 +5,6 @@
   import Interaction from '@event-calendar/interaction'; 
   import addEvent from '@event-calendar/core';
   import SelectedList from './lib/components/SelectedList.svelte';
-  import PrePopulated from './prePopulated.svelte';
   import listSelect from './listSelect.svelte';
   import ListSelect from './listSelect.svelte';
   import people_events from './lib/scripts/prepopulatedEvents.js';
@@ -70,7 +69,10 @@ let persons = [
       selectBackgroundColor: "#a6d4ff",
       dateClick: (info) => console.log('hi'),
       select: selectFunction, 
-      eventMouseEnter: mouseFunction
+      eventMouseEnter: mouseFunction, 
+      slotMinTime: '07:00:00', 
+      slotMaxTime: '19:00:00', 
+      buttonText: {today: 'Back to Today'}
   };
 
   function selectFunction(info) {
@@ -172,12 +174,18 @@ function mouseFunction(info) {
       )}>Change slot duration</button> -->
 
   <!-- Imported Calendar Component -->
-  <div>
+  <div class="container">
+      <div class="column">
         <ListSelect {persons} on:event={handleMessage}></ListSelect>
+      </div>
+      <div class="column">
         Add your availability below:
-        <Calendar bind:this = {ec} {plugins} {options} />
+        <Calendar bind:this = {ec} {plugins} {options}/>
+      </div>
+      <div class="column">
         Available at hour:
         <SelectedList {selected_members} {hoverMembers}/>
+      </div>
   </div>
 
     <!-- Counter Component -->
@@ -187,27 +195,36 @@ function mouseFunction(info) {
 
   </main>
 
-  <style>
-    /* .logo {
-      height: 6em;
-      padding: 1.5em;
-      will-change: filter;
-      transition: filter 300ms;
-    }
-    .logo:hover {
-      filter: drop-shadow(0 0 2em #646cffaa);
-    }
-    .logo.svelte:hover {
-      filter: drop-shadow(0 0 2em #ff3e00aa);
-    }
-    .read-the-docs {
-      color: #888;
-    } */
-    /* div {
-        display:
-
-    } */
-  </style>
+<style>
+  html, body {
+    display: contents;
+    width: 100%;
+    background-color: yellow;
+  }
+  main {
+    display: contents;
+    width: 100%;
+    background-color: red; 
+  }
+  .container {
+    display: flex;
+    width: 100% ;
+    justify-content: center;
+    gap: 20px; 
+  }
+  .column { 
+    flex: 1; 
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .ec {
+    --ec-today-bg-color: transparent;
+  }
+  .ec-button {
+    color: #787877;
+    --ec-button-text-color: #787877;
+  }
+</style>
 
 
 
