@@ -15,13 +15,13 @@ let selected_members = ['Alex', 'John', 'Jim', 'Jill', 'Adam', 'Elena', 'Olivia'
 
 // automate this list
 let persons = [
-        {name: 'Alex', checked: false},
-        {name: 'John', checked: false},
-        {name: 'Jim', checked: false},
-        {name: 'Jill', checked: false},
-        {name: 'Adam', checked: false},
-        {name: 'Elena', checked: false},
-        {name: 'Olivia', checked: false}
+        {name: 'Alex', checked: true},
+        {name: 'John', checked: true},
+        {name: 'Jim', checked: true},
+        {name: 'Jill', checked: true},
+        {name: 'Adam', checked: true},
+        {name: 'Elena', checked: true},
+        {name: 'Olivia', checked: true}
     ];
 
 
@@ -69,12 +69,16 @@ let persons = [
       selectBackgroundColor: "#a6d4ff",
       dateClick: (info) => console.log('hi'),
       select: selectFunction, 
+      unselect: unselectFunction,
       eventMouseEnter: mouseFunction, 
       slotMinTime: '07:00:00', 
       slotMaxTime: '19:00:00', 
       buttonText: {today: 'Back to Today'}
   };
 
+  function unselectFunction(info) {
+    ec.unselect(); 
+  }
   function selectFunction(info) {
     ec.addEvent({start: info.start, end: info.end, 
                 backgroundColor: "#3eed44", display: 'background'}); // do I need to add an id?, "#a6d4ff" color before
@@ -183,7 +187,7 @@ function mouseFunction(info) {
         <Calendar bind:this = {ec} {plugins} {options}/>
       </div>
       <div class="column">
-        Available at hour:
+        <h4>Available at time block:</h4>
         <SelectedList {selected_members} {hoverMembers}/>
       </div>
   </div>
@@ -224,6 +228,7 @@ function mouseFunction(info) {
     color: #787877;
     --ec-button-text-color: #787877;
   }
+
 </style>
 
 

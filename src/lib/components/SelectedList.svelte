@@ -5,21 +5,33 @@
 
 <style>
   /* Add your component styles here */ 
-    /* .selected {
+    .selected {
         font-weight: bold; 
         text-decoration: underline;
-    } */
+    }
+    
 </style>
 
 <div>
   <!-- {#each selected_members as member}
   <ol class="selected">{member}</ol>
   {/each} -->
-
+  Prioritized Members
   {#each hoverMembers as member}
-    <!-- <ol>{member}</ol> -->
+  {#if selected_members.includes(member)}
+      <ol class = "selected">{member}</ol>
+  {/if}
+{/each}
+  Unprioritized Members
+  {#each hoverMembers as member}
+  {#if !selected_members.includes(member)}
+      <ol>{member}</ol>
+  {/if}
+{/each}
+  <!-- {#each hoverMembers as member}
+    <<ol>{member}</ol> 
     <div>{member}</div>
-  {/each}
+  {/each} -->
 </div>
 
 <!-- {#each hover_members as member}

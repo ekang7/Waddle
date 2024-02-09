@@ -24,7 +24,7 @@
 </script>
 
 <div>
-    Responded:
+    Select members to prioritize:
     {#each persons as {name, checked}}
         <div>
             <label>
