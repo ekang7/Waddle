@@ -21,7 +21,7 @@
   {/if}
 {/each}
 <br/>
-  Unprioritized Members
+  Others
   {#each hoverMembers as member}
   {#if !selected_members.includes(member)}
       <ol>{member}</ol>
