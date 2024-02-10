@@ -7,6 +7,7 @@
 
     export let persons;
 
+    // Upon a label being checked or unchecked, dispatches updated persons object
     function sendPerson() {
 		dispatch('event', {
 			text: persons
